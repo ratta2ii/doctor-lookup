@@ -42,13 +42,20 @@ $(document).ready(function() {
     request.send();
 
     const getElements = function(response) {
-      let doctorInfo = response.data[0].profile;
-      console.log(`${doctorInfo.first_name} ${doctorInfo.middle_name} ${doctorInfo.last_name}`);
+      let doctors = response.data;
+      for (let i in doctors){
+        console.log(doctors[i]);
+        $(".display-div").show();
+        $('#display-results').append.(`${doctors[i].first_name} ${doctors[i].middle_name} ${doctors[i].last_name}`);
+      }
 
-      $(".display-div").show();
-      $('#display-results').empty().text(`${doctorInfo.first_name} ${doctorInfo.middle_name} ${doctorInfo.last_name}`);
+
+
     };
 
   });
 
 });
+
+
+  // let doctorInfo = response.data[0].profile;
