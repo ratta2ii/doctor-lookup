@@ -1,3 +1,7 @@
 body {
   background-color: cornflowerblue;
 }
+
+div#display-div {
+  display: none;
+}

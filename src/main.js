@@ -11,7 +11,8 @@ const API_Parameter = "user_key";  //
 const endPoint = "https://api.betterdoctor.com/2016-03-01/doctors?";
 
 
-
+// complete url for testing
+// https://api.betterdoctor.com/2016-03-01/doctors?query=toothache&location=37.773%2C-122.413%2C100&user_location=37.773%2C-122.413&skip=0&limit=10&user_key=44daf8c9eb3e172b888f7b46e3411e9e
 
 
 
@@ -41,10 +42,11 @@ $(document).ready(function() {
     request.send();
 
     const getElements = function(response) {
-      let doctorInfo = response.data;
+      let doctorInfo = response.data[0].profile;
+      console.log(`${doctorInfo.first_name} ${doctorInfo.middle_name} ${doctorInfo.last_name}`);
 
       $(".display-div").show();
-      $('#display-results').empty().text(doctorInfo);
+      $('#display-results').empty().text(`${doctorInfo.first_name} ${doctorInfo.middle_name} ${doctorInfo.last_name}`);
     };
 
   });
