@@ -43,12 +43,16 @@ $(document).ready(function() {
 
     const getElements = function(response) {
       let doctors = response.data;
+      console.log(doctors);
+
+      $("#display-results").empty();
       for (let i in doctors){
-        console.log(doctors[i]);
-        $(".display-div").show();
-        $('#display-results').append.(`${doctors[i].first_name} ${doctors[i].middle_name} ${doctors[i].last_name}`);
+        let profile = doctors[i].practices[0];
+        $("#display-results").append(`<li>${profile.name}</li> <li>${profile.website}</li><br>`);
       }
 
+
+      $("#display-div").show();
 
 
     };
@@ -59,3 +63,4 @@ $(document).ready(function() {
 
 
   // let doctorInfo = response.data[0].profile;
+  // let doctors = response.data[0].practices[0].website;
