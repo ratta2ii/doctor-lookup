@@ -1,7 +1,7 @@
 {
-  "name": "project-name",
+  "name": "doctor-lookup",
   "version": "1.0.0",
-  "description": "",
+  "description": "A website to search for local Doctor's based on specific medical issues.",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode development",
@@ -11,7 +11,7 @@
     "debug": "node --inspect node_modules/.bin/jest --runInBand"
   },
   "keywords": [],
-  "author": "",
+  "author": "Trevor Mackin",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.6.4",

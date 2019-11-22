@@ -1,24 +1,70 @@
-# Webpack Template
+# Doctor Lookup
 ##### By Trevor Mackin
-###### Created November 13, 2019
+###### Created November 22, 2019
 
 ## Description
 
-_This is a template for future use in individual projects._
+_This is a website where users may enter a medical issue (ie: “sore throat”, "rash", etc.) into a form, submit it, and receive a list of doctors in their city (Seattle in this case) who can treat their medical issue.._
 
 ## Setup/Installation Requirements:
 
-1. Open https://ratta2ii.github.io/webpack-template
-2. Clone repository to local machine (or use as template to open new repo)
-3. Optional: Update title in webpack.config.js
-4. Optional: Update name of project in package in package.json
-5. Optional: Add author info, etc...
-6. TESTING: Make sure to add file(s) in __tests__ (Example: file-name.test.js)
-7. $ npm install  (in the command line interface) to install
+Open gh-pages at https://ratta2ii.github.io/doctor-lookup/ to view website
+##### OR
+1. Open https://ratta2ii.github.io/doctor-lookup
+2. Clone repository to local machine
+3. $ npm install  (in the command line interface) to install
+4. $ npm run start -for live server
+5. OPTIONAL:  $ npm run test (for testing with Jest)
 
-  - $ npm run build -when you are ready to build project
-  - $ npm run test -for testing with (Jest)
-  - $ npm run start -for live server
+
+## Specifications:
+
+User inputs City Name:
+User inputs Medical Condition:
+###### Example:
+
+* ### Input:  
+    * ##### Seattle
+    * ##### Flu
+* ### Output:
+
+
+      Karen Heart MD
+      18645 17th Street, Seattle, WA 98121
+      1 + (206) 555-4444
+      www.kheartMD.com
+      Expecting new patients: NO
+
+
+      Johnny Smith MD
+      3217 N 16th Street, Seattle, WA 98101
+      1 + (206) 555 - 5555
+      www.fludoctor.com
+      Excepting new patients: YES
+
+    . . . Ongoing list for as many Doctors meet the criteria
+
+
+ ###### Example 2:   
+* ### Input:  
+    * ##### Seattle
+    * ##### bicpain
+* ### Output:
+
+
+      I'm sorry, no Doctors meet this search criteria. Please try other search terms.
+
+
+ ###### Example 3:
+
+* ### Input:  
+    * ##### Seattle
+    * ##### headaches
+* ### Output:
+
+
+      Output will throw error if server is unable to retrieve information from the API call.
+      I'm sorry, we are unable to retrieve the information at this time.
 
 ## Technologies Used:
 
