@@ -5,3 +5,7 @@ body {
 div#display-div {
   display: none;
 }
+
+li {
+  list-style: none;
+}
