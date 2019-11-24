@@ -6,6 +6,60 @@ div#display-div {
   display: none;
 }
 
+.container {
+  background: blue;
+  padding: 25px;
+  margin-top: 100px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 100px;
+  margin-top: 50px;
+  font-weight: bold;
+}
+
+h5 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.input-div {
+  width: 50%;
+  margin: 0 auto;
+}
+
+input#condition-input {
+  min-width: 75%;
+  margin: 50px auto 50px auto;
+  height: 40px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+
+}
+
+button {
+  height: 40px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  padding-right: 10px;
+  background-color: green;
+  color: white;
+}
+
 li {
   list-style: none;
+  border: 1px solid black;
+  background-color: ghostwhite;
+  padding-left: 20px;
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+.doc-name {
+  font-weight: bolder;
+  font-size: 20px;
+  margin-top: 20px;
 }
