@@ -3,17 +3,14 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 import { API_KEY } from './../.env';
-// import { Example, anotherExample } from './scripts';
-
-
-const endPoint = "https://api.betterdoctor.com/2016-03-01/doctors?";
-
+import { phoneNumberConverter } from './scripts';
 
 $(document).ready(function() {
 
   $('#find-doctor').click(function() {
 
     let condition = $("#condition-input").val();
+    const endPoint = "https://api.betterdoctor.com/2016-03-01/doctors?";
     let url = `${endPoint}query=${condition}&location=47.6062%2C-122.3321%2C25&skip=0&limit=25&user_key=${API_KEY}`;
     let request = new XMLHttpRequest();
 
@@ -23,7 +20,9 @@ $(document).ready(function() {
         getElements(response);
       }
       else {
-        reject(Error(request.statusText));    /// Fix error message
+        $("#display-results").empty();
+        $("#display-results").append("<h5>Error: Trying to connect.</h5>");
+        $("#display-div").show();
       }
     };
 
@@ -31,14 +30,13 @@ $(document).ready(function() {
     request.send();
 
     const getElements = function(response) {
-
       $("#display-results").empty();
       let doctors = response.data;
 
       if(doctors.length === 0 || condition === ""){
-         $("#display-results").empty();
-         $("#display-results").append("<h1>I'm sorry, no Doctors meet this criteria.</h1>");
-         $("#display-div").show();
+        $("#display-results").empty();
+        $("#display-results").append("<h5>I'm sorry, no Doctors meet this criteria.</h5>");
+        $("#display-div").show();
       }
       else {
         for (let i in doctors){
@@ -52,7 +50,7 @@ $(document).ready(function() {
           else {
             newPatients = "Not at this time.";
           }
-          $("#display-results").append(`<li class="doc-name">${profile.name}</li><n><li>${address.street}, ${address.city}, ${address.state} ${address.zip}</li><n><li>${phoneNumber}</li><n><li>${profile.website}</li><li>Accepting new patients: ${newPatients} </li><br>`);
+          $("#display-results").append(`<li class="doc-name">${profile.name}</li><n><li>${address.street}, ${address.city}, ${address.state} ${address.zip}</li><n><li>${phoneNumberConverter(phoneNumber)}</li><n><li>${profile.website === undefined ? "Website Coming Soon": profile.website}</li><li>Accepting new patients: ${newPatients} </li><br>`);
         }
         $("#display-div").show();
       }

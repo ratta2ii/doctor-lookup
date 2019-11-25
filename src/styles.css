@@ -17,11 +17,13 @@ h1 {
   font-size: 100px;
   margin-top: 50px;
   font-weight: bold;
+  color: ghostwhite;
 }
 
 h5 {
   text-align: center;
   font-weight: bold;
+  color: ghostwhite;
 }
 
 .input-div {
