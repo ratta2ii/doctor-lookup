@@ -3,7 +3,7 @@ import { API_KEY } from './../.env';
 
 
 let conditionInput = function() {
-  let condition = $("#condition-input").empty().val();
+  let condition = $("#condition-input").val();
   return condition;
 }
 
