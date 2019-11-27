@@ -35,3 +35,13 @@ export function websiteTextConverter(str){
     return str.slice(7);
   }
 }
+
+
+export function newPatientConverter(newPatients){
+  if (newPatients === true){
+    return "YES";
+  }
+  else {
+    return "Not at this time.";
+  }
+}
