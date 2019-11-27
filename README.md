@@ -24,7 +24,6 @@ User inputs Medical Condition:
 ###### Example:
 
 * ### Input:  
-    * ##### Seattle
     * ##### Flu
 * ### Output:
 
@@ -47,8 +46,7 @@ User inputs Medical Condition:
 
  ###### Example 2:   
 * ### Input:  
-    * ##### Seattle
-    * ##### bicpain
+    * ##### bicpzn
 * ### Output:
 
 
@@ -58,13 +56,13 @@ User inputs Medical Condition:
  ###### Example 3:
 
 * ### Input:  
-    * ##### Seattle
     * ##### headaches
 * ### Output:
 
 
       Output will throw error if server is unable to retrieve information from the API call.
-      I'm sorry, we are unable to retrieve the information at this time.
+      
+      "There was an error processing your request: Error Message"
 
 ## Technologies Used:
 

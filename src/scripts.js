@@ -25,3 +25,13 @@ export function getDoctors(medicalCondition){
 export function phoneNumberConverter(str){
   return `1 + (${str.slice(0,3)}) ${str.slice(3,6)}-${str.slice(6)}`;
 }
+
+
+export function websiteTextConverter(str){
+  if (str === undefined){
+    return "Website Coming Soon";
+  }
+  else {
+    return str.slice(7);
+  }
+}
