@@ -13,6 +13,8 @@ Open gh-pages at https://ratta2ii.github.io/doctor-lookup/ to view website
 1. Open https://ratta2ii.github.io/doctor-lookup
 2. Clone repository to local machine
 3. $ npm install  (in the command line interface) to install
+4. Create .env file in root directory
+5. Get API key at https://www.betterdoctor.com and save as const API_KEY in .env file
 4. $ npm run start -for live server
 5. OPTIONAL:  $ npm run test (for testing with Jest)
 
@@ -61,7 +63,7 @@ User inputs Medical Condition:
 
 
       Output will throw error if server is unable to retrieve information from the API call.
-      
+
       "There was an error processing your request: Error Message"
 
 ## Technologies Used:
