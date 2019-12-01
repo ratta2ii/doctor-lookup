@@ -41,6 +41,10 @@ module.exports = {
             /spec/
           ],
         loader: "eslint-loader"
+      },
+      {
+        test: /\.jpeg$/,
+        use: 'file-loader'
       }
     ]
   }
