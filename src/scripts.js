@@ -31,6 +31,9 @@ export function websiteTextConverter(str){
   if (str === undefined){
     return "Website Coming Soon";
   }
+  if (str.charAt(7) === "/"){
+    return str.slice(8);
+  }
   else {
     return str.slice(7);
   }

@@ -43,7 +43,7 @@ User inputs Medical Condition:
       www.fludoctor.com
       Excepting new patients: YES
 
-    . . . Ongoing list for as many Doctors meet the criteria
+      . . . Ongoing list for as many Doctors meet the criteria
 
 
  ###### Example 2:   
@@ -59,10 +59,8 @@ User inputs Medical Condition:
 
 * ### Input:  
     * ##### headaches
-* ### Output:
+* ### Output (When there is an error in the API call.):
 
-
-      Output will throw error if server is unable to retrieve information from the API call.
 
       "There was an error processing your request: Error Message"
 
