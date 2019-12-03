@@ -17,7 +17,7 @@ $(document).ready(function() {
         const body = JSON.parse(response);
         const doctors = body.data;
 
-        if(doctors.length === 0){
+        if(doctors.length === 0 || medicalCondition === ""){
           $("#display-results").empty().append("<h5>I'm sorry, no Doctors meet this criteria. Please try other search terms.</h5>");
         }
         else {

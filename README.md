@@ -8,15 +8,14 @@ _This is a website where users may enter a medical issue (ie: “sore throat”,
 
 ## Setup/Installation Requirements:
 
-Open gh-pages at https://ratta2ii.github.io/doctor-lookup/ to view website
-##### OR
 1. Open https://ratta2ii.github.io/doctor-lookup
 2. Clone repository to local machine
 3. $ npm install  (in the command line interface) to install
 4. Create .env file in root directory
-5. Get API key at https://www.betterdoctor.com and save as const API_KEY in .env file
-4. $ npm run start -for live server
-5. OPTIONAL:  $ npm run test (for testing with Jest)
+5. Get API key at https://www.betterdoctor.com and save in .env (API_KEY = ...)
+6. $ npm run start (for live server)
+7. $ npm run build
+8. OPTIONAL:  $ npm run test (for testing with Jest)
 
 
 ## Specifications:

@@ -1,12 +1,9 @@
-import { API_KEY } from './../.env';
-
-
 export function getDoctors(medicalCondition){
   return new Promise(function(resolve, reject) {
     let request = new XMLHttpRequest();
 
     const endPoint = "https://api.betterdoctor.com/2016-03-01/doctors?";
-    let url = `${endPoint}query=${medicalCondition}&location=47.6062%2C-122.3321%2C25&skip=0&limit=25&user_key=${API_KEY}`;
+    let url = `${endPoint}query=${medicalCondition}&location=47.6062%2C-122.3321%2C25&skip=0&limit=25&user_key=${process.env.API_KEY}`;
 
     request.onload = function() {
       if (this.status === 200) {
