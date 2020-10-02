@@ -4,7 +4,7 @@
 
 ## Description
 
-_This is a website where users may enter a medical issue (ie: “sore throat”, "rash", etc.) into a form, submit it, and receive a list of doctors in their city (Seattle in this case) who can treat their medical issue.._
+_This is a website where users may enter a medical issue (sore throat, rash, etc.)  and receive a list of doctors in their area that can treat the specific medical issue. This project demostrates an ablilty to connect to different API's, use parameeters in query strings, and how to parse data from the response body._
 
 ## Setup/Installation Requirements:
 
